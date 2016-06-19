@@ -1,0 +1,355 @@
+FileOpen
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\groep.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\groep.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_aktentas_staat_zij.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_aktentas_staat_zij.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_drink_zij.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_drink_zij.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_loopt.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_loopt.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_loopt_zij.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_loopt_zij.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_rent_zij.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_rent_zij.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_rolstoel.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_rolstoel.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_rolstoel_zij.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_rolstoel_zij.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_staat-leest_voor.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_staat-leest_voor.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_staat_1.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_staat_1.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_staat_2.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_staat_2.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_staat_voor.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_staat_voor.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_staat_zij.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_staat_zij.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_vrouw_staat.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_vrouw_staat.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_zetel_voor.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_zetel_voor.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_zit-eet.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_zit-eet.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_zit-eet_voor.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_zit-eet_voor.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_zit-leest.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_zit-leest.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_zit-leest_voor.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_zit-leest_voor.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_zit-lig_voor.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_zit-lig_voor.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_zit.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_zit.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_zit_zij.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\man_zit_zij.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vogels.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vogels.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_kind_loopt.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_kind_loopt.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_loopt.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_loopt.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_loopt_voor.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_loopt_voor.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_rent_zij.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_rent_zij.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_staat.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_staat.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_staat_zij.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_staat_zij.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_zit.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_zit.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_zit_zij_1.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_zit_zij_1.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_zit_zij_2.dwg"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\lab2012\Block_lib\Blocks\Personen\vrouw_zit_zij_2.sld"
+FileOpen
+Y
+"C:\P701650\BLOCKS\Elektrisch\symby.dwg"
+(princ "\n \n ")(princ)
