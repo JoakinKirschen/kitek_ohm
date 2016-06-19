@@ -1,5 +1,5 @@
-;;-----[ Lab2012 UPDATE SYSTEM]----------------
-(defun updatefunction (LabPathDest List1 / Temp PMPPath UserPath PlotPath PlotStyles DirNew DirLengthNew Printers)
+;;-----[ KTO UPDATE SYSTEM]----------------
+(defun KTO_updatefunction (LabPathDest List1 / Temp PMPPath UserPath PlotPath PlotStyles DirNew DirLengthNew Printers)
   (vl-load-com)
 
   ;Modus
