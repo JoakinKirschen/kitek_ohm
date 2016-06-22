@@ -1,5 +1,5 @@
 ;;-----[ KTO UPDATE SYSTEM]----------------
-(defun KTO_updatefunction (LabPathDest List1 / Temp PMPPath UserPath PlotPath PlotStyles DirNew DirLengthNew Printers)
+(defun KTO_updatefunction (KTO_path List1 / Temp PMPPath UserPath PlotPath PlotStyles DirNew DirLengthNew Printers)
   (vl-load-com)
 
   ;Modus
@@ -14,10 +14,10 @@
   (setq PlotStyles (strcat(getenv "PrinterStyleSheetDir")"\\"))
   
   (princ "\nExitting autocad")
-  (setq scriptfile (findfile "L12_update.vbs")) 
+  (setq scriptfile (findfile "KTO_update.vbs")) 
   (startapp (strcat "CSCRIPT.EXE //nologo " (vl-prin1-to-string scriptfile)
 ;   " " (vl-prin1-to-string LabPathSource)
-   " " (vl-prin1-to-string LabPathDest)
+   " " (vl-prin1-to-string KTO_path)
    " " (vl-prin1-to-string Temp)
    " " (vl-prin1-to-string UserPath)
    " " (vl-prin1-to-string PlotPath)

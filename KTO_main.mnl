@@ -1,83 +1,34 @@
-					;[                                                                              ]
-					;[                                Lab2012.MNL                                   ]
-					;[                                                                              ]
-					;[                            LAB 2012 voor acad                                ]
-					;[                                                                              ]
-					;[                             by CHSC, JOKI & PEJA                             ]
+					;[                                                           ]
+					;[            KTO_main.mnl                                   ]
+					;[                                                           ]
+					;[        KiTek Ohm voor acad                                ]
+					;[                                                           ]
+					;[by Joakin Kirschen special thanks to LeeMac and TerryCAD   ]
 
 (vl-load-com)
 ;;Initialise Functions
-(if (not L12_SUPPORT)
-  (load "L12_SUPPORT.LSP")
-)
-(if (not L12_LABVARS)
-  (load "L12_LABVARS.LSP")
-)
-(if (not L12_ERRORTRAP)
-  (load "L12_ERRORTRAP.LSP")
-)
-(if (not L12_TEKST)
-  (load "L12_TEKST.LSP")
-)
-(if (not L12_ARCERING)
-  (load "L12_ARCERING.LSP")
-)
-(if (not L12_PLOT)
-  (load "L12_PLOT.LSP")
-)
-(if (not L12_DIMENSIONS)
-  (load "L12_DIMENSIONS.LSP")
-)
-(if (not L12_BLOCKS)
-  (load "L12_BLOCKS.LSP")
-)
-(if (not L12_TEKEN)
-  (load "L12_TEKEN.LSP")
-)
-(if (not L12_PREUPDATE)
-  (load "L12_PREUPDATE.LSP")
-)
-(if (not L12_STANDARD)
-  (load "L12_STANDARD.LSP")
-)
-(if (not L12_INSTEL)
-  (load "L12_INSTEL.LSP")
-)
-(if (not L12_SETTINGS)
-  (load "L12_SETTINGS.LSP")
-)
-(if (not L12_EXCEL)
-  (load "L12_EXCEL.LSP")
-)
-(if (not L12_STEAL)
-  (load "L12_STEAL.LSP")
-)
-(if (not L12_AMG_READEXCEL.LSP)
-  (load "L12_AMG_READEXCEL.LSP")
-)
-
-(if (not L12_AUTOTRAP.LSP)
-  (load "L12_AUTOTRAP.LSP")
+(if (not KTO_main)
+  (load "KTO_main.lsp")
 )
 
 ;;-----[ Globale variabelen ]-------------
-(setq L12_Lab_version 2012.52)
-(setq L12_GMI_stamp 7139)
-(setq LabPathDest (vl-filename-directory (findfile "Lab2012.MNL")))
-(if (not(getenv "L12_Disipline"))(setenv "L12_Disipline" "AC-"))			;register presets
-(if (not(getenv "L12_UpdateSettings"))(setenv "L12_UpdateSettings" "2"))	;register presets
-(if (not(getenv "L12_AutosaveSettings"))(setenv "L12_AutosaveSettings" "50"))
-(setq gl_autosave (atoi (getenv "L12_AutosaveSettings")))
+(setq KTO_version 0.01)
+;(setq KTO_GMI_stamp 7139)
+(setq KTO_path (vl-filename-directory (findfile "KTO_main.mnl")))
+;(if (not(getenv "KTO_Disipline"))(setenv "KTO_Disipline" "AC-"))			;register presets
+(if (not(getenv "KTO_UpdateSettings"))(setenv "KTO_UpdateSettings" "2"))	;register presets
+;(if (not(getenv "KTO_AutosaveSettings"))(setenv "KTO_AutosaveSettings" "50"))
+;(setq gl_autosave (atoi (getenv "KTO_AutosaveSettings")))
 
-;;-----[ Preset LAB2012 ]-----------------------------
-(princ "\n\nPreset Lab2012...\n")
-(menucmd "p30=+Lab2012.POPL1")
-(menucmd "p30=+Lab2012.POPL2")
-(menucmd "p30=+Lab2012.POPL3")
-(menucmd "p30=+Lab2012.POP1")
-(setq ccCurColor "1")
-(setq ccCurLType "CONTINUOUS")
-(setq arctoggle "0")
+;;-----[ Preset KiTek Ohm ]-----------------------------
+(princ "\n\nPreset KiTek Ohm...\n")
+;(menucmd "p30=+Lab2012.POPL1")
+;(menucmd "p30=+Lab2012.POPL2")
+;(menucmd "p30=+Lab2012.POPL3")
+;(menucmd "p30=+Lab2012.POP1")
+;(setq ccCurColor "1")
+;(setq ccCurLType "CONTINUOUS")
+;(setq arctoggle "0")
 (setvar "PEDITACCEPT" 1)
 (setvar "layernotify" 0)
 (setvar "cmdecho" 0)
@@ -87,12 +38,12 @@
 (setvar "hpcolor" "bylayer")
 (setvar "hplayer" ".")
 (setvar "cetransparency" 0)
-;(L12_basecheck)
-(setvar "UCSICON" 1)
+;(KTO_basecheck)
+;(setvar "UCSICON" 1)
 ;(command "nwload")
-(L12_moveparmeters)
-(L12_statusb)				;	(lees)
-(L12_moveparmeters)
+;(KTO_moveparmeters)
+;(KTO_statusb)				;	(lees)
+;(KTO_moveparmeters)
 (setvar "cmdecho" 1)
 (princ "\n Done!\n")
 
