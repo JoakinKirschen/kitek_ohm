@@ -13,9 +13,9 @@
 
 ;;-----[ Globale variabelen ]-------------
 (setq KTO_version 0.01)
-;(setq KTO_GMI_stamp 7139)
+(setq KTO_stamp 8140)
 (setq KTO_path (vl-filename-directory (findfile "KTO_main.mnl")))
-;(if (not(getenv "KTO_Disipline"))(setenv "KTO_Disipline" "AC-"))			;register presets
+(if (not(getenv "KTO_Disipline"))(setenv "KTO_Disipline" "TI-"))			;register presets
 (if (not(getenv "KTO_UpdateSettings"))(setenv "KTO_UpdateSettings" "2"))	;register presets
 ;(if (not(getenv "KTO_AutosaveSettings"))(setenv "KTO_AutosaveSettings" "50"))
 ;(setq gl_autosave (atoi (getenv "KTO_AutosaveSettings")))
@@ -36,11 +36,6 @@
 (if (> (atof (getvar 'AcadVer))  18.2) (setvar "startmode" 0))
 (setvar "annoallvisible" 1)
 (setvar "hpcolor" "bylayer")
-(setvar "hplayer" ".")
-(setvar "cetransparency" 0)
-;(KTO_basecheck)
-;(setvar "UCSICON" 1)
-;(command "nwload")
 ;(KTO_moveparmeters)
 ;(KTO_statusb)				;	(lees)
 ;(KTO_moveparmeters)
