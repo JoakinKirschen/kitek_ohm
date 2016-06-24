@@ -12,14 +12,32 @@
 ;;----- Set used specification: SAFE:SAFETY 
 ;;----- Set used specification: MECH:HYDRPNEU 
 ;;----- Set used specification: SUPPORT:LIB
+;KTO_PHASE: 1 2 3 or more phases
 
-(defun KTO_setprop (type val1$ / )
-    (if (KTO_dwgprops-get-custom-prop "KTO_mark" nil)
+(defun KTO_setprop (type$ val$ / )
+    (if (not(KTO_dwgprops-get-custom-prop "KTO_mark" nil))
         (KTO_dwgprops-set-custom-prop "KTO_mark" (rtos KTO_stamp) nil)
     )
-    (KTO_dwgprops-set-custom-prop type val$ nil)
+    (KTO_dwgprops-set-custom-prop type$ val$ nil)
+    (KTO_Statusb)
 )
 
+(defun KTO_togglex ( / temp$)
+    (if (not(KTO_dwgprops-get-custom-prop "KTO_mark" nil))
+        (KTO_dwgprops-set-custom-prop "KTO_mark" (rtos KTO_stamp) nil)
+    )
+    (if (KTO_dwgprops-get-custom-prop "KTO_togglex" nil)
+        (progn
+          (setq temp$ (KTO_dwgprops-get-custom-prop "KTO_togglex" nil))
+          (if (= temp$ "0")
+            (KTO_dwgprops-set-custom-prop "KTO_togglex" "1" nil)
+            (KTO_dwgprops-set-custom-prop "KTO_togglex" "0" nil)
+          )
+        )
+        (KTO_dwgprops-set-custom-prop "KTO_togglex" "0" nil)
+    )
+    (KTO_Statusb)
+)
 
 ;;-----[ Functie die huidige versie van autocad terugstuurt]----------------
 
@@ -58,15 +76,13 @@ version
 ;;-----[ Functie die kijkt of de DWG al eerder gebruikt werd door KiTek Ohm]----------------
 
 (defun KTO_checkinstel ( / )
-(if (not(KTO_mark))
-	(if (not(= (getvar "useri1") 0)) 
-		(KTO_setuserr KTO_GMI_stamp 2 KTO_Lab_version 1 1 (getvar "useri1"))
+	(if (not(KTO_mark))
 		(INSTEL)
 	)
 )
-(KTO_moveparmeters)
-(princ )
-)
+;(KTO_moveparmeters)
+;(princ )
+
 
 
 
@@ -116,114 +132,78 @@ KTO_SPEC
 KTO_PHASE
 )
 
-;;-----[ Functie om schaal door te sturen]-----------------------------------
-
-(defun KTO_setschaal (schaalold / )
-(if (= (KTO_getmode) 2)
-
-	(progn ;normal
-		(if (not (inPspace))
-		(if(member "1:1" (_SortedScaleList (GetScaleListEntities)))
-			(progn (setvar "CANNOSCALE" "1:1"))
-			(progn (command "-scalelistedit" "a" "1:1" "1:1" "e")(setvar "CANNOSCALE" "1:1"))
-		)
-		)	
-	(setvar "useri1" schaalold)
-	(KTO_dwgprops-set-custom-prop "KTO_scale" (rtos schaalold) nil)
-	)
-	
-	(progn ;anotative mode
-		(setq schaalold (strcat "1:"(rtos schaalold 2 0)))
-		(if (not (inPspace))
-		(if(member schaalold (_SortedScaleList (GetScaleListEntities)))
-			(progn (setvar "CANNOSCALE" schaalold))
-			(progn (command "-scalelistedit" "a" schaalold schaalold "e")(setvar "CANNOSCALE" schaalold))
-		)
-		)
-	(setvar "useri1" 0)
-	(KTO_dwgprops-set-custom-prop "KTO_scale" "Annotative" nil)
-	)
+(defun KTO_gettogglex ( / KTO_toggleX )
+(if (KTO_dwgprops-get-custom-prop "KTO_togglex" nil)
+(setq KTO_toggleX  (KTO_dwgprops-get-custom-prop "KTO_togglex" nil))
+(setq KTO_toggleX nil)
 )
+KTO_toggleX
 )
 
 ;;-----[ Functie om schaal door te sturen]-----------------------------------
+;
+;(defun KTO_setschaal (schaalold / )
+;(if (= (KTO_getmode) 2);
+;
+;	(progn ;normal
+;		(if (not (inPspace))
+;		(if(member "1:1" (_SortedScaleList (GetScaleListEntities)))
+;			(progn (setvar "CANNOSCALE" "1:1"))
+;			(progn (command "-scalelistedit" "a" "1:1" "1:1" "e")(setvar "CANNOSCALE" "1:1"))
+;		)
+;		)	
+;	(setvar "useri1" schaalold)
+;	(KTO_dwgprops-set-custom-prop "KTO_scale" (rtos schaalold) nil)
+;	)
+;	
+;	(progn ;anotative mode
+;		(setq schaalold (strcat "1:"(rtos schaalold 2 0)))
+;		(if (not (inPspace))
+;		(if(member schaalold (_SortedScaleList (GetScaleListEntities)))
+;			(progn (setvar "CANNOSCALE" schaalold))
+;			(progn (command "-scalelistedit" "a" schaalold schaalold "e")(setvar "CANNOSCALE" schaalold))
+;		)
+;		)
+;	(setvar "useri1" 0)
+;	(KTO_dwgprops-set-custom-prop "KTO_scale" "Annotative" nil)
+;	)
+;)
+;)
 
-(defun KTO_getschaal ( / schaal)
-(KTO_checkinstel)
-(if (or (= (KTO_getmode) 2)(= (KTO_getmodeold) 2))
-    (progn
-	(if (and (KTO_mark) (/=  (getvar "useri1") 0))
-	(progn
-	(setq schaal (getvar "useri1"))
-	)
-	(setq schaal (atof (KTO_dwgprops-get-custom-prop "KTO_scale" nil)))
-	)
-	)
-	(progn
-	(setq schaal (/ 1 (getvar "cannoscalevalue")))
-	)
-)
-schaal ;
-)
+;;-----[ Functie om schaal door te sturen]-----------------------------------
+;
+;(defun KTO_getschaal ( / schaal)
+;(KTO_checkinstel)
+;(if (or (= (KTO_getmode) 2)(= (KTO_getmodeold) 2))
+;    (progn
+;	(if (and (KTO_mark) (/=  (getvar "useri1") 0))
+;	(progn
+;	(setq schaal (getvar "useri1"))
+;	)
+;	(setq schaal (atof (KTO_dwgprops-get-custom-prop "KTO_scale" nil)))
+;	)
+;	)
+;	(progn
+;	(setq schaal (/ 1 (getvar "cannoscalevalue")))
+;	)
+;)
+;schaal ;
+;)
 
 
 ;;-----[ Functie die KTO_Statusbar instelt]----------------------
 
 (defun KTO_Statusb ( / statuscolor statuslt statusla statussta staver val_useri1 val_useri2 val_userr2 staschaal)
- (setvar "cmdecho" 0)
- (setq statusla "-")
- (setq statussta "-")
+  (setvar "cmdecho" 0)
+  (if (KTO_getspec)	(setq stat_type (KTO_gettype))(setq stat_type "-"))
+  (if (KTO_gettype)	(setq stat_spec (KTO_getspec))(setq stat_spec "-"))
+  (if (KTO_getphase)	(setq stat_phase (KTO_getphase))(setq stat_phase "-"))
+  (if (KTO_gettogglex)	(setq stat_togglex (KTO_gettogglex))(setq stat_togglex "-"))
 
- (Cond
-   ((= ccCurColor "1") (setq statuscolor "Rood"))
-   ((= ccCurColor "3") (setq statuscolor "Groen"))
-   ((= ccCurColor "7") (setq statuscolor "Wit"))
-   ((= ccCurColor "2") (setq statuscolor "Geel"))
-   ((= ccCurColor "6") (setq statuscolor "Magenta"))
-   ((= ccCurColor "4") (setq statuscolor "Cyaan"))
-   ((= ccCurColor "5") (setq statuscolor "Blauw"))
-   ((= ccCurColor "8") (setq statuscolor "Grijs"))
-   (nil (setq statuscolor "-"))
- )
- (Cond
-   ((= ccCurLType "CONTINUOUS") (setq statuslt "Co"))
-   ((= ccCurLType "HIDDEN") (setq statuslt "Hi"))
-   ((= ccCurLType "HIDDEN2") (setq statuslt "Hi2"))
-   ((= ccCurLType "DASHDOT") (setq statuslt "Dd"))
-   ((= ccCurLType "DASHDOT2") (setq statuslt "Dd2"))
-   ((= ccCurLType "CENTER") (setq statuslt "Ce"))
-   ((= ccCurLType "CENTER2") (setq statuslt "Ce2"))
-   ((= ccCurLType "DIVIDE") (setq statuslt "Di"))
-   ((= ccCurLType "DIVIDE2") (setq statuslt "Di2"))
-   ((= ccCurLType "PHANTOM") (setq statuslt "Ph"))
-   ((= ccCurLType "PHANTOM2") (setq statuslt "Ph2"))
-   ((= ccCurLType "BORDER") (setq statuslt "Bo"))
-   ((= ccCurLType "BORDER2") (setq statuslt "Bo2"))
-   ((= ccCurLType "DASHED") (setq statuslt "Da"))
-   ((= ccCurLType "DASHED2") (setq statuslt "Da2"))
-   (nil (setq statuslt "-"))
- )
-(if (KTO_mark)
-(progn
-	(setq staver (strcat "Lab"(rtos KTO_Lab_version 2 2)))
-	(Cond
-	((= (KTO_getlang) 1) (setq statusla "NL"))
-	((= (KTO_getlang) 2) (setq statusla "FR"))
-	((= (KTO_getlang) 3) (setq statusla "EN"))
-	)
-	(setq statussta (KTO_standaard_Statusb))
-	(if (= (KTO_getmode) 2)
-	(setq staschaal (strcat "1:" (rtos (KTO_getschaal) 2 0)))
-	(setq staschaal "-->")
-	)
-)
-(progn
-	(setq staver  (strcat "Lab"(rtos KTO_Lab_version 2 2)" not set"))
-	(setq staschaal "-")
-)
-)	
-  (setvar "modemacro" (strcat staver " | " statuscolor " | " statuslt " | " statusla " | " statussta " | " staschaal ))
+  (setq staver (strcat "Ohm v"(rtos KTO_version 2 2)))
+  (setvar "modemacro" (strcat staver " [" stat_type ":" stat_spec ":" stat_phase ":" stat_togglex "] " ))
   (setvar "cmdecho" 1)
+  (princ)
 )
 
 ;;-----[ Functie om layer naar oorspronkelijk terug te plaatsen]-----------------------------------
@@ -310,7 +290,7 @@ schaal ;
 (defun KTO_MyYesNo (Title$ Question$ / Answer$ Dcl_Id% Return#)
   (princ "\nMyYesNo")(princ)
   ; Load Dialog
-  (setq Dcl_Id% (load_dialog "LAB2012.dcl"))
+  (setq Dcl_Id% (load_dialog "KTO_main.dcl"))
   (new_dialog "LabYesNo" Dcl_Id%)
   ; Set Dialog Initial Settings
   (set_tile "Title" Title$)
@@ -386,6 +366,7 @@ schaal ;
 (KTO_Statusb)
 (setvar "UCSICON" 1)
 (setvar "dblclkedit" 1)
+(princ "reactor trigger")
 )
 
 (defun DeleteFolder (path / fso path)

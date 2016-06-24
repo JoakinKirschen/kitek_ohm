@@ -1,0 +1,13 @@
+
+   ***
+   *** STePS Symbols library: tablet 4 template files
+   ***
+   *
+   * PROT4   : TABLET4 prototype drawing
+   * PROT4S12: TABLET4 prototype drawing with SchemaCAD 12 commands
+   *
+   * T4      : TABLET4 prototype drawing with symbols
+   * T4S12   : TABLET4 prototype drawing with SchemaCAD 12 commands and symbols
+   *
+   * TABLET4.INI: layout description for STePS command GEN. TEMPLATE 
+   *

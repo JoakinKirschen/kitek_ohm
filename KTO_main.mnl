@@ -10,6 +10,9 @@
 (if (not KTO_main)
   (load "KTO_main.lsp")
 )
+(if (not KTO_support)
+  (load "KTO_support.lsp")
+)
 
 ;;-----[ Globale variabelen ]-------------
 (setq KTO_version 0.01)
@@ -36,13 +39,8 @@
 (if (> (atof (getvar 'AcadVer))  18.2) (setvar "startmode" 0))
 (setvar "annoallvisible" 1)
 (setvar "hpcolor" "bylayer")
+(KTO_Statusb)
 ;(KTO_moveparmeters)
-;(KTO_statusb)				;	(lees)
 ;(KTO_moveparmeters)
 (setvar "cmdecho" 1)
 (princ "\n Done!\n")
-
-
-
-
-
