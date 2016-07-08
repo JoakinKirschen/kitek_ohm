@@ -13,6 +13,7 @@
 (if (not KTO_support)
   (load "KTO_support.lsp")
 )
+<<<<<<< HEAD
 
 (if (not KTO_frstring)
   (load "KTO_frstring.lsp")
@@ -39,6 +40,8 @@
 (if (not KTO_libtrigger)
   (load "KTO_libtrigger.lsp")
 )
+=======
+>>>>>>> origin/master
 
 ;;-----[ Globale variabelen ]-------------
 (setq KTO_version 0.01)

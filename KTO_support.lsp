@@ -20,7 +20,10 @@
     )
     (KTO_dwgprops-set-custom-prop type$ val$ nil)
     (KTO_Statusb)
+<<<<<<< HEAD
 	(princ)
+=======
+>>>>>>> origin/master
 )
 
 (defun KTO_togglex ( / temp$)
@@ -31,6 +34,7 @@
         (progn
           (setq temp$ (KTO_dwgprops-get-custom-prop "KTO_togglex" nil))
           (if (= temp$ "0")
+<<<<<<< HEAD
             (progn(KTO_dwgprops-set-custom-prop "KTO_togglex" "1" nil)(ReplaceThis "   " "XXX"))
             (progn(KTO_dwgprops-set-custom-prop "KTO_togglex" "0" nil)(ReplaceThis "XXX" "   "))
           )
@@ -39,6 +43,15 @@
     )
     (KTO_Statusb)
 	(princ)
+=======
+            (KTO_dwgprops-set-custom-prop "KTO_togglex" "1" nil)
+            (KTO_dwgprops-set-custom-prop "KTO_togglex" "0" nil)
+          )
+        )
+        (KTO_dwgprops-set-custom-prop "KTO_togglex" "0" nil)
+    )
+    (KTO_Statusb)
+>>>>>>> origin/master
 )
 
 ;;-----[ Functie die huidige versie van autocad terugstuurt]----------------
@@ -134,6 +147,7 @@ KTO_SPEC
 KTO_PHASE
 )
 
+<<<<<<< HEAD
 (defun KTO_getline ( / KTO_LINE )
 (if (KTO_dwgprops-get-custom-prop "KTO_LINE" nil)
 (setq KTO_LINE  (KTO_dwgprops-get-custom-prop "KTO_LINE" nil))
@@ -142,6 +156,8 @@ KTO_PHASE
 KTO_LINE
 )
 
+=======
+>>>>>>> origin/master
 (defun KTO_gettogglex ( / KTO_toggleX )
 (if (KTO_dwgprops-get-custom-prop "KTO_togglex" nil)
 (setq KTO_toggleX  (KTO_dwgprops-get-custom-prop "KTO_togglex" nil))
@@ -203,6 +219,7 @@ KTO_toggleX
 
 ;;-----[ Functie die KTO_Statusbar instelt]----------------------
 
+<<<<<<< HEAD
 (defun KTO_Statusb ( / stat_type stat_spec stat_phase stat_line stat_togglex)
   (setvar "cmdecho" 0)
   (if (KTO_gettype)	(setq stat_type (KTO_gettype))(setq stat_type "-"))
@@ -213,6 +230,17 @@ KTO_toggleX
 
   (setq staver (strcat "Ohm v"(rtos KTO_version 2 2)))
   (setvar "modemacro" (strcat staver " [" stat_type ":" stat_spec ":" stat_phase ":" stat_line ":" stat_togglex "] " ))
+=======
+(defun KTO_Statusb ( / statuscolor statuslt statusla statussta staver val_useri1 val_useri2 val_userr2 staschaal)
+  (setvar "cmdecho" 0)
+  (if (KTO_getspec)	(setq stat_type (KTO_gettype))(setq stat_type "-"))
+  (if (KTO_gettype)	(setq stat_spec (KTO_getspec))(setq stat_spec "-"))
+  (if (KTO_getphase)	(setq stat_phase (KTO_getphase))(setq stat_phase "-"))
+  (if (KTO_gettogglex)	(setq stat_togglex (KTO_gettogglex))(setq stat_togglex "-"))
+
+  (setq staver (strcat "Ohm v"(rtos KTO_version 2 2)))
+  (setvar "modemacro" (strcat staver " [" stat_type ":" stat_spec ":" stat_phase ":" stat_togglex "] " ))
+>>>>>>> origin/master
   (setvar "cmdecho" 1)
   (princ)
 )
@@ -340,6 +368,36 @@ KTO_toggleX
 ;   (t (vlr-data-set r (1+ (vlr-data r))))
 ;   ))
    
+<<<<<<< HEAD
+=======
+;(if (null *autosave-reactor*)
+    (setq *autosave-reactor*
+        (vlr-command-reactor "autosave"
+           '(
+                (:vlr-commandended     . autosave)
+ ;               (:vlr-commandcancelled . autosave)
+ ;               (:vlr-commandfailed    . autosave)
+            )
+        )
+    )
+;)
+(setq *autosave-acdoc* (vla-get-activedocument (vlax-get-acad-object))
+      *autosave-count* 0
+)
+
+
+(defun autosave ( obj arg )
+    (if (and 
+				(/= 0 gl_autosave)
+				(zerop (rem (setq *autosave-count* (1+ *autosave-count*)) gl_autosave))
+				(= 1 (getvar 'dwgtitled))
+        )
+        (if (= (KTO_MyYesNo "You should be saving your drawing!" "Do you wish to save now?") "Yes")(vla-save *autosave-acdoc*))
+    )
+    (princ)
+)
+(princ)
+>>>>>>> origin/master
 
 (vlr-docmanager-reactor
  nil
@@ -350,7 +408,11 @@ KTO_toggleX
 (KTO_Statusb)
 (setvar "UCSICON" 1)
 (setvar "dblclkedit" 1)
+<<<<<<< HEAD
 (princ "reactor triggered")
+=======
+(princ "reactor trigger")
+>>>>>>> origin/master
 )
 
 (defun DeleteFolder (path / fso path)

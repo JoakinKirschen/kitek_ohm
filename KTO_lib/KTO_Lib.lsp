@@ -515,8 +515,13 @@
               Q$ "User selects" Q$ ","  ;Scale
               Q$ "0" Q$ ","             ;Explode
               Q$ Attribs$ Q$ ","        ;Attribs
+<<<<<<< HEAD
               Q$ "0" Q$ ","                ;Trim
               Q$ "0" Q$)                ;Allign
+=======
+			  Q$ "0" Q$ ","				;Trim
+			  Q$ "0" Q$)				;Allign
+>>>>>>> origin/master
             );setq
             (write-line BlockData$ FileName%)
           );progn
@@ -660,18 +665,30 @@
                         (setq ExplodeList@ (list Item$))
                       );if
                     );Field# 5
+<<<<<<< HEAD
                      ((= Field# 6) ;Can be deleted
+=======
+ 				    ((= Field# 6) ;Can be deleted
+>>>>>>> origin/master
                       (if AttribsList@
                       (setq AttribsList@ (append AttribsList@ (list Item$)))
                       (setq AttribsList@ (list Item$))
                       );if
                     );Field# 6
+<<<<<<< HEAD
                     ((= Field# 7)
+=======
+				    ((= Field# 7)
+>>>>>>> origin/master
                       (if TrimList@
                         (setq TrimList@ (append TrimList@ (list Item$)))
                         (setq TrimList@ (list Item$))
                       );if
+<<<<<<< HEAD
                     );Field# 7     
+=======
+                    );Field# 7	 
+>>>>>>> origin/master
                   (t (exit))
                 );cond
                 (setq Field# (1+ Field#))
@@ -897,6 +914,7 @@
 ;        );progn
 ;      );if
 
+<<<<<<< HEAD
         ;New Code Start
 
       ;;;;;; Inserting Block usin LeeMac Functions
@@ -905,6 +923,23 @@
       
       ;;;;;; Inserting Block
       ;(setvar "OSMODE" 0);None
+=======
+		;New Code Start
+
+	  ;;;;;; Inserting Block using LeeMac Functions
+	  (princ PathBlock$)
+	  (princ Trim$)(princ Allign$)
+	  (if (/= Trim$ "0")
+	  (progn
+	    (if (not L12_AutoBlockBreakV1-7)(load "L12_AutoBlockBreakV1-7.lsp"))
+		(LM_abbc PathBlock$ Allign$ Scale~)
+	  );progn
+	  
+	  (progn
+	  (setvar "OSMODE" 0);None
+	  ;;;;;; Inserting Block
+	  
+>>>>>>> origin/master
       (if (= Explode$ "1");Yes 
         (progn
           (setq PathBlock$ (strcat "*" BlkPath$ Block$))
@@ -913,6 +948,7 @@
             (command ".INSERT" PathBlock$ Point@ Scale~)
           );if
         );progn
+<<<<<<< HEAD
         
         
         ;;;;;; Inserting Block (Not Exploded)
@@ -920,12 +956,21 @@
         (progn
           (setq PathBlock$ (strcat BlkPath$ Block$ ".dwg"))
 		  (princ PathBlock$)
+=======
+		
+		
+		;;;;;; Inserting Block (Not Exploded)
+		
+        (progn
+          (setq PathBlock$ (strcat BlkPath$ Block$))
+>>>>>>> origin/master
           (if (/= Layer$ "Current layer")
             (if (tblsearch "LAYER" Layer$)
               (command ".LAYER" "T" Layer$ "U" Layer$ "ON" Layer$ "S" Layer$ "")
               (command ".LAYER" "M" Layer$ "")
             );if
           );if
+<<<<<<< HEAD
           (if (not KTO_AutoBlockBreakV1-7)(load "KTO_AutoBlockBreakV1-7.lsp"))
           (LM_abbc PathBlock$ Allign$ Scale~ Trim$)
            ;progn
@@ -937,6 +982,20 @@
       
       );progn
 
+=======
+          (if (and (= Point@ "User selects") (= Scale~ "User selects"))
+            (progn
+              (command ".INSERT" PathBlock$)
+            );progn
+            (command ".INSERT" PathBlock$ Point@ Scale~ "")
+          );if
+        );progn
+      );if
+	  );progn
+	  );if
+		;New Code Stop
+		
+>>>>>>> origin/master
       (setvar "OSMODE" Osmode)
     );progn
   );if
@@ -1449,7 +1508,11 @@
   ;-----------------------------------------------------------------------------
   (defun KTO_Lib_def: (MslideList@ / BlkList$ FileName% Q$)
     (setq Q$ "\"")
+<<<<<<< HEAD
     (princ MslideList@)
+=======
+	(princ MslideList@)
+>>>>>>> origin/master
     (setq BlkList$ (strcat
       Q$(nth 0 MslideList@)Q$ "," ;Block$
       Q$(nth 1 MslideList@)Q$ "," ;Layer$
@@ -1457,7 +1520,11 @@
       Q$(nth 3 MslideList@)Q$ "," ;Scale$
       Q$(nth 4 MslideList@)Q$ "," ;Explode$
       Q$(nth 5 MslideList@)Q$ "," ;Attribs$
+<<<<<<< HEAD
       Q$(nth 6 MslideList@)Q$ "," ;Trim$
+=======
+	  Q$(nth 6 MslideList@)Q$ "," ;Trim$
+>>>>>>> origin/master
       Q$(nth 7 MslideList@)Q$)    ;Allign$
     );setq
     (setq FileName% (open PathDef$ "a"))
@@ -1564,9 +1631,15 @@
       (if (/= Replace$ "No")
         (progn
           (Mslide_Wblock: Block$ Dot$)  ;Te verwijderen
+<<<<<<< HEAD
           (prompt "test1")
           (KTO_Lib_def: MslideList@)
           (prompt "test4")
+=======
+		  (prompt "test1")
+          (KTO_Lib_def: MslideList@)
+		  (prompt "test4")
+>>>>>>> origin/master
           (GetOK "Block Library Manager" (strcat "The " Block$ " block was added\n"
             "to the " LibTitle$ " Library.\nContinue or press Cancel to exit.") ""
           );GetOK
@@ -1717,7 +1790,11 @@
     Path5$ PathFile$ Q$ Text$ WriteText$
   );variables
   (if (not (findfile (strcat BlockLibBase$ "\\Custom\\KTO_Temp.bat")))
+<<<<<<< HEAD
     (vl-mkdir (strcat BlockLibBase$ ""))
+=======
+	(vl-mkdir (strcat BlockLibBase$ ""))
+>>>>>>> origin/master
     (vl-mkdir (strcat BlockLibBase$ "\\Custom"))
   );if
   (if (not *KTO_Lib*);Check for global *KTO_Lib* variable
@@ -1898,8 +1975,13 @@
         Q$ "User selects" Q$ ","  ;Scale
         Q$ "0" Q$ ","             ;Explode
         Q$ Attribs$ Q$ ","        ;Attribs
+<<<<<<< HEAD
         Q$ "0" Q$ ","              ;Trim
         Q$ "0" Q$)                  ;Allign
+=======
+        Q$ "0" Q$ ","			  ;Trim
+        Q$ "0" Q$)				  ;Allign
+>>>>>>> origin/master
       );setq
       (write-line BlockData$ FileName%)
     );foreach
@@ -1974,18 +2056,30 @@
                         (setq ExplodeList@ (list Item$))
                       );if
                     );Field# 5
+<<<<<<< HEAD
                      ((= Field# 6) ;Can be deleted
+=======
+ 				    ((= Field# 6) ;Can be deleted
+>>>>>>> origin/master
                       (if AttribsList@
                       (setq AttribsList@ (append AttribsList@ (list Item$)))
                       (setq AttribsList@ (list Item$))
                       );if
                     );Field# 6
+<<<<<<< HEAD
                     ((= Field# 7)
+=======
+				    ((= Field# 7)
+>>>>>>> origin/master
                       (if TrimList@
                         (setq TrimList@ (append TrimList@ (list Item$)))
                         (setq TrimList@ (list Item$))
                       );if
+<<<<<<< HEAD
                     );Field# 7     
+=======
+                    );Field# 7	 
+>>>>>>> origin/master
                     (t (exit))
                   );cond
                   (setq Field# (1+ Field#))
@@ -2171,7 +2265,11 @@
             );if
           );progn
         );if
+<<<<<<< HEAD
         (setq Osmode (getvar "OSMODE"))
+=======
+		(setq Osmode (getvar "OSMODE"))
+>>>>>>> origin/master
 ;        (if (= Explode$ "1");Yes
 ;          (progn
 ;            (setq PathBlock$ (strcat "*" Block$))
@@ -2196,6 +2294,7 @@
 ;            );if
 ;          );progn
 ;        );if
+<<<<<<< HEAD
         
         
 
@@ -2205,6 +2304,24 @@
       
       ;;;;;; Inserting Block
       ;(setvar "OSMODE" 0);None
+=======
+		
+		
+
+	  ;;;;;; Inserting Block usin LeeMac Functions
+	  (princ PathBlock$)
+	  (princ Trim$)(princ Allign$)
+	  (if (/= Trim$ "0")
+	  (progn
+	    (if (not L12_AutoBlockBreakV1-7)(load "L12_AutoBlockBreakV1-7.lsp"))
+		(LM_abbc PathBlock$ Allign$ Scale~)
+	  );progn
+	  
+	  (progn
+      (setvar "OSMODE" 0);None
+	  ;;;;;; Inserting Block
+	  
+>>>>>>> origin/master
       (if (= Explode$ "1");Yes 
         (progn
           (setq PathBlock$ (strcat "*" BlkPath$ Block$))
@@ -2213,6 +2330,7 @@
             (command ".INSERT" PathBlock$ Point@ Scale~)
           );if
         );progn
+<<<<<<< HEAD
         
         
         ;;;;;; Inserting Block (Not Exploded)
@@ -2220,12 +2338,21 @@
         (progn
           (setq PathBlock$ (strcat BlkPath$ Block$ ".dwg"))
 		  (princ PathBlock$)
+=======
+		
+		
+		;;;;;; Inserting Block (Not Exploded)
+		
+        (progn
+          (setq PathBlock$ (strcat BlkPath$ Block$))
+>>>>>>> origin/master
           (if (/= Layer$ "Current layer")
             (if (tblsearch "LAYER" Layer$)
               (command ".LAYER" "T" Layer$ "U" Layer$ "ON" Layer$ "S" Layer$ "")
               (command ".LAYER" "M" Layer$ "")
             );if
           );if
+<<<<<<< HEAD
           (if (not KTO_AutoBlockBreakV1-7)(load "KTO_AutoBlockBreakV1-7.lsp"))
           (LM_abbc PathBlock$ Allign$ Scale~ Trim$)
            ;progn
@@ -2239,6 +2366,22 @@
 
       (setvar "OSMODE" Osmode)
     );progn
+=======
+          (if (and (= Point@ "User selects") (= Scale~ "User selects"))
+            (progn
+              (command ".INSERT" PathBlock$)
+            );progn
+            (command ".INSERT" PathBlock$ Point@ Scale~ "")
+          );if
+        );progn
+      );if
+	  );progn
+	  );if
+		;New Code Stop
+		
+        (setvar "OSMODE" Osmode)
+      );progn
+>>>>>>> origin/master
     );if
     (princ)
   );defun Dwg_Blks:
@@ -2327,8 +2470,13 @@
                     ScaleList@   (Move_nth MoveRef# Ref# ScaleList@)
                     ExplodeList@ (Move_nth MoveRef# Ref# ExplodeList@)
                     AttribsList@ (Move_nth MoveRef# Ref# AttribsList@)
+<<<<<<< HEAD
                     TrimList@    (Move_nth MoveRef# Ref# TrimList@)
                     AllignList@  (Move_nth MoveRef# Ref# AllignList@)
+=======
+					TrimList@    (Move_nth MoveRef# Ref# TrimList@)
+					AllignList@  (Move_nth MoveRef# Ref# AllignList@)
+>>>>>>> origin/master
               );setq
               (setq SlideRef$ nil
                     MoveRef# nil
@@ -2371,8 +2519,13 @@
                   ScaleList@   (Delete_nth Ref# ScaleList@)
                   ExplodeList@ (Delete_nth Ref# ExplodeList@)
                   AttribsList@ (Delete_nth Ref# AttribsList@)
+<<<<<<< HEAD
                   TrimList@    (Delete_nth Ref# TrimList@)
                   AllignList@  (Delete_nth Ref# AllignList@)
+=======
+				  TrimList@    (Delete_nth Ref# TrimList@)
+				  AllignList@  (Delete_nth Ref# AllignList@)
+>>>>>>> origin/master
                   No_Pages# (fix (/ (1- (length BlkList@)) 20.0))
                   BlockLen# (1- BlockLen#)
                   SlideRef$ nil
@@ -2475,18 +2628,30 @@
                         (setq ExplodeList@ (list Item$))
                       );if
                     );Field# 5
+<<<<<<< HEAD
                      ((= Field# 6) ;Can be deleted
+=======
+ 				    ((= Field# 6) ;Can be deleted
+>>>>>>> origin/master
                       (if AttribsList@
                       (setq AttribsList@ (append AttribsList@ (list Item$)))
                       (setq AttribsList@ (list Item$))
                       );if
                     );Field# 6
+<<<<<<< HEAD
                     ((= Field# 7)
+=======
+				    ((= Field# 7)
+>>>>>>> origin/master
                       (if TrimList@
                         (setq TrimList@ (append TrimList@ (list Item$)))
                         (setq TrimList@ (list Item$))
                       );if
+<<<<<<< HEAD
                     );Field# 7     
+=======
+                    );Field# 7	 
+>>>>>>> origin/master
                   (t (exit))
                 );cond
                 (setq Field# (1+ Field#))
@@ -2892,10 +3057,17 @@
                 (setq *LastPath$ "")
               );if
               (setq NewBlkPath$ 
+<<<<<<< HEAD
                 ;(substr 
                 (getfiled " Block Folder Location" (strcat BlockLibBase$ "\\" Title$ ".def") "def" (atoi *Fld_Opts*))
                 ;(+(strlen BlockLibBase$)1)
                 ;)
+=======
+				;(substr 
+                (getfiled " Block Folder Location" (strcat BlockLibBase$ "\\" Title$ ".def") "def" (atoi *Fld_Opts*))
+				;(+(strlen BlockLibBase$)1)
+				;)
+>>>>>>> origin/master
               );setq
               (if NewBlkPath$
                 (setq *LastPath$ (car (GetPathFile NewBlkPath$)))
@@ -2981,6 +3153,7 @@
           (if (= *Fld_Opts* "3")
             (progn
               (if *PreviousPath$
+<<<<<<< HEAD
               
 ;                (substr 
 ;                (getfiled " Block Folder Location" (strcat BlockLibBase$ "\\" Title$ ".def") "def" (atoi *Fld_Opts*))
@@ -2994,15 +3167,37 @@
                   ;(+(strlen BlockLibBase$)1)
                   ;)
                 );setq
+=======
+			  
+;			    (substr 
+;                (getfiled " Block Folder Location" (strcat BlockLibBase$ "\\" Title$ ".def") "def" (atoi *Fld_Opts*))
+;				(+(strlen BlockLibBase$)1)
+;				)
+	  
+			  
+                (setq NewBlkPath$ 
+				  ;(substr
+				  (getfiled (strcat " Select a drawing in a folder for " Title$ " Library")(strcat BlockLibBase$ "\\") "dwg" 2)
+                  ;(+(strlen BlockLibBase$)1)
+				  ;)
+				);setq
+>>>>>>> origin/master
                 (progn
                   (if (not *LastPath$)
                     (setq *LastPath$ "")
                   );if
                   (setq NewBlkPath$ 
+<<<<<<< HEAD
                   ;(substr
                   (getfiled (strcat " Select a drawing in a folder for " Title$ " Library")(strcat BlockLibBase$ "\\") "dwg" 2)
                   ;(+(strlen BlockLibBase$)1)
                   ;)
+=======
+				  ;(substr
+				  (getfiled (strcat " Select a drawing in a folder for " Title$ " Library")(strcat BlockLibBase$ "\\") "dwg" 2)
+				  ;(+(strlen BlockLibBase$)1)
+				  ;)
+>>>>>>> origin/master
                   );setq
                 );progn
               );if
@@ -3541,7 +3736,11 @@
   (write-line "(princ \"\\n \\n \")(princ)" FileName%)
   (close FileName%)
   (command "SCRIPT" (strcat BlockLibBase$ "\\Temp\\Temp.scr"))
+<<<<<<< HEAD
     (princ)
+=======
+	(princ)
+>>>>>>> origin/master
 );defun Slide_Script
 ;-------------------------------------------------------------------------------
 ; c:User_Lib - Calls function User_Lib with default arguments.
@@ -3648,18 +3847,30 @@
                         (setq ExplodeList@ (list Item$))
                       );if
                     );Field# 5
+<<<<<<< HEAD
                      ((= Field# 6) ;Can be deleted
+=======
+ 				    ((= Field# 6) ;Can be deleted
+>>>>>>> origin/master
                       (if AttribsList@
                       (setq AttribsList@ (append AttribsList@ (list Item$)))
                       (setq AttribsList@ (list Item$))
                       );if
                     );Field# 6
+<<<<<<< HEAD
                     ((= Field# 7)
+=======
+				    ((= Field# 7)
+>>>>>>> origin/master
                       (if TrimList@
                         (setq TrimList@ (append TrimList@ (list Item$)))
                         (setq TrimList@ (list Item$))
                       );if
+<<<<<<< HEAD
                     );Field# 7     
+=======
+                    );Field# 7	 
+>>>>>>> origin/master
                   (t (exit))
                 );cond
                 (setq Field# (1+ Field#))
@@ -3778,10 +3989,17 @@
           (exit)
         );progn
       );if
+<<<<<<< HEAD
       
       
       ;;;;;; Setting Insertion Point
       
+=======
+	  
+	  
+	  ;;;;;; Setting Insertion Point
+	  
+>>>>>>> origin/master
       (if (= Point@ "Lower left limits")
         (setq Point@ (getvar "LIMMIN"))
       );if
@@ -3820,11 +4038,19 @@
           );if
         );progn
       );if
+<<<<<<< HEAD
       
       
       
       ;;;;;; Setting Insertion Scale
       
+=======
+	  
+	  
+	  
+	  ;;;;;; Setting Insertion Scale
+	  
+>>>>>>> origin/master
       (if (= Scale~ "Dim scale")
         (if (= (getvar "DIMSCALE") 0)
           (progn
@@ -3836,11 +4062,19 @@
           (setq Scale~ (getvar "DIMSCALE"))
         );if
       );if
+<<<<<<< HEAD
       
       
       
       ;;;;;; Setting Scale
       
+=======
+	  
+	  
+	  
+	  ;;;;;; Setting Scale
+	  
+>>>>>>> origin/master
       (if (and (= Scale~ "User selects") (/= Point@ "User selects"))
         (progn
           (while (or (null UserScale~) (< UserScale~ 0))
@@ -3859,11 +4093,19 @@
           (setq Scale~ (rtosr UserScale~))
         );progn
       );if
+<<<<<<< HEAD
       
       
       
       ;;;;;; Setting Scale
       
+=======
+	  
+	  
+	  
+	  ;;;;;; Setting Scale
+	  
+>>>>>>> origin/master
       (if (/= Scale~ "User selects")
         (progn
           (if (= (type Scale~) 'STR)
@@ -3880,6 +4122,7 @@
           );if
         );progn
       );if
+<<<<<<< HEAD
       
       (setq Osmode (getvar "OSMODE"))
       
@@ -3891,6 +4134,26 @@
       
       ;;;;;; Inserting Block
       ;(setvar "OSMODE" 0);None
+=======
+	  
+      (setq Osmode (getvar "OSMODE"))
+	  
+	  
+	  
+	  ;;;;;; Inserting Block usin LeeMac Functions
+	  (princ PathBlock$)
+	  (princ Trim$)(princ Allign$)
+	  (if (/= Trim$ "0")
+	  (progn
+	    (if (not L12_AutoBlockBreakV1-7)(load "L12_AutoBlockBreakV1-7.lsp"))
+		(LM_abbc PathBlock$ Allign$ Scale~)
+	  );progn
+	  
+	  (progn
+	  
+	  ;;;;;; Inserting Block
+	  (setvar "OSMODE" 0);None
+>>>>>>> origin/master
       (if (= Explode$ "1");Yes 
         (progn
           (setq PathBlock$ (strcat "*" BlkPath$ Block$))
@@ -3899,18 +4162,28 @@
             (command ".INSERT" PathBlock$ Point@ Scale~)
           );if
         );progn
+<<<<<<< HEAD
         
         
         ;;;;;; Inserting Block (Not Exploded)
         
         (progn
           (setq PathBlock$ (strcat BlkPath$ Block$ ".dwg")) 
+=======
+		
+		
+		;;;;;; Inserting Block (Not Exploded)
+		
+        (progn
+          (setq PathBlock$ (strcat BlkPath$ Block$))
+>>>>>>> origin/master
           (if (/= Layer$ "Current layer")
             (if (tblsearch "LAYER" Layer$)
               (command ".LAYER" "T" Layer$ "U" Layer$ "ON" Layer$ "S" Layer$ "")
               (command ".LAYER" "M" Layer$ "")
             );if
           );if
+<<<<<<< HEAD
           (if (not KTO_AutoBlockBreakV1-7)(load "KTO_AutoBlockBreakV1-7.lsp"))
           (LM_abbc PathBlock$ Allign$ Scale~ Trim$)
            ;progn
@@ -3922,6 +4195,22 @@
       
       );progn
 
+=======
+          (if (and (= Point@ "User selects") (= Scale~ "User selects"))
+            (progn
+              (command ".INSERT" PathBlock$)
+            );progn
+            (command ".INSERT" PathBlock$ Point@ Scale~ "")
+          );if
+        );progn
+      );if
+	  
+	  
+	  
+	  
+	  );progn
+	  );if
+>>>>>>> origin/master
       (setvar "OSMODE" Osmode)
     );progn
   );if
@@ -5595,7 +5884,11 @@
   (vl-load-com)
   (if (not (findfile (strcat BlockLibBase$ "\\Custom\\KTO_Temp.bat")))
     (progn
+<<<<<<< HEAD
       (vl-mkdir (strcat BlockLibBase$ ""))
+=======
+	  (vl-mkdir (strcat BlockLibBase$ ""))
+>>>>>>> origin/master
       (vl-mkdir (strcat BlockLibBase$ "\\Custom"))
       (vl-mkdir (strcat BlockLibBase$ "\\Custom\\KTO_Lib"))
       (vl-mkdir (strcat BlockLibBase$ "\\Custom\\KTO_Sld"))
