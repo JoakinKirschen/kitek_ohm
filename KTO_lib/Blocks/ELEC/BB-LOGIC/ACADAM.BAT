@@ -1,0 +1,13 @@
+@ECHO OFF 
+SET ACAD=C:\ACAD12\SUPPORT;C:\ACAD12\FONTS;C:\ACAD12\ADS
+SET ACADDRV=C:\ACAD12\DRV;C:\HW\QVISION
+SET ACADCFG=C:\ACAD12\CFG\STD
+SET AVECFG=C:\ACAD12\CFG\STD
+C:
+ECHO AutoCAD is getting started,one moment please...
+echo.
+echo The drawings will be placed in C:\ACAD12\SAMPLE
+ECHO.
+C:\ACAD12\ACAD %1 %2
+
+

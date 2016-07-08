@@ -1,0 +1,5 @@
+;-------------------------------------------------------------------------------
+; Sel_Lib.dat
+;-------------------------------------------------------------------------------
+"Block","\Custom\KTO_Lib\KTO_Lib.def","\Custom\KTO_Lib\KTO_Lib.def"
+"ELEC_NBN_SWITCHES","\Blocks\ELEC\NBN\SWITCHES\ELEC_NBN_SWITCHES.def","\Blocks\ELEC\NBN\SWITCHES\ELEC_NBN_SWITCHES.def"

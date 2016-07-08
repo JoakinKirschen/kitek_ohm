@@ -1,0 +1,157 @@
+FileOpen
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW11H.DWG"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW11H.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW11V.DWG"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW11V.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW12H.DWG"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW12H.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW12V.DWG"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW12V.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW13H.DWG"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW13H.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW13V.DWG"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW13V.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW21H.DWG"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW21H.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW21V.DWG"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW21V.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW22H.DWG"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW22H.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW22V.DWG"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW22V.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW23H.DWG"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW23H.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW23V.DWG"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW23V.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW30H.DWG"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW30H.sld"
+FileOpen
+Y
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW30V.DWG"
+DONUT 0 0.00000001 (getvar "INSBASE") 
+ZOOM E
+DONUT 0 (/ (getvar "VIEWSIZE") 25.0) (getvar "INSBASE") 
+CHPROP L  C 6 
+ZOOM 0.95X
+REGEN 
+MSLIDE
+"C:\Users\P701650\AppData\Roaming\AutoCAD 2016\kitek_ohm\KTO_lib\Blocks\ELEC\NBN\SWITCHES\BNSSW30V.sld"
+FileOpen
+Y
+"C:\Users\P701650\appdata\roaming\autocad 2016\kitek_ohm\kto_lib\Custom\KTO_Lib.dwg"
+(princ "\n \n ")(princ)
