@@ -13,7 +13,6 @@
 (if (not KTO_support)
   (load "KTO_support.lsp")
 )
-<<<<<<< HEAD
 
 (if (not KTO_frstring)
   (load "KTO_frstring.lsp")
@@ -40,8 +39,6 @@
 (if (not KTO_libtrigger)
   (load "KTO_libtrigger.lsp")
 )
-=======
->>>>>>> origin/master
 
 ;;-----[ Globale variabelen ]-------------
 (setq KTO_version 0.01)
@@ -68,6 +65,8 @@
 (if (> (atof (getvar 'AcadVer))  18.2) (setvar "startmode" 0))
 (setvar "annoallvisible" 1)
 (setvar "hpcolor" "bylayer")
+(setvar "qaflags" 0)
+(setenv "TemplatePath" "C:\\Users\\P701650\\AppData\\Roaming\\AutoCAD 2016\\kitek_ohm\\KTO_template")
 (KTO_Statusb)
 ;(KTO_moveparmeters)
 ;(KTO_moveparmeters)
